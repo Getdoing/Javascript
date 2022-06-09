@@ -13,7 +13,7 @@
 			left: 124px;
 			width: 204px;
 			height: 77px;
-			background: transparent url('./clock_logo.png') 0% 0% no-repeat padding-box;
+			background-image: transparent url("./clock_logo.png") 0% 0% no-repeat padding-box;
 			opacity: 1;
 			
 			position: absolute;
