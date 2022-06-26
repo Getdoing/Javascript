@@ -149,7 +149,32 @@ Ans-  function Unique_Shirts (arr,N) {
 // Congratulations on making up to this question. Let us give you a fairly simple array problem to solve.
  // If you know how to iterate through the array, you will easily be able to solve this. 
  // The problem statement is simple- given N elements, find the minimum and maximum numbers among those elements.
-  
+  function arrayMin(arr){
+let min = arr[1];
+    for(var i=0; i<N; i++){
+        if(min > arr[i]){
+            min = arr[i]
+        }
+    }
+    return min;
+}
+
+function arrayMax(arr){
+let max = arr[1];
+    for(var i=0; i<N; i++){
+        if(max < arr[i]){
+            max = arr[i]
+        }
+    }
+    return max;
+}
+let arr = [3,1,4,5,6,7,8];
+N = arr.length;
+console.log(arrayMin(arr,N),arrayMax(arr,N));
+
+let arr1 = [0,0,0,0,0,0,0];
+N = arr1.length;
+console.log(arrayMin(arr1,N),arrayMax(arr1,N));
 
   
 // 11.Birthday Game
