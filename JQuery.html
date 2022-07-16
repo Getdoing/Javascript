@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src="C:\Users\arohi\Desktop\Developer/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1 class="heading">Assignment No.1</h1>
+	<button id="hide" >Hide Heading</button>
+    <button id="show">Show Heading</button>
+
+    <br><br>
+
+    <h1 id="head">Assignment No.2</h1>
+    <button id="get">Get Heading</button>
+    
+
+    <script type="text/javascript">
+    	//for hide btn-
+	$('#hide').click(function(){
+
+	    $('.heading').hide();
+
+	});
+	//for show btn-
+	$('#show').on('click',() => {
+
+	    $('.heading').show();
+
+	});
+
+//Que.2--Create an ajax call, by using this api "https://jsonplaceholder.typicode.com/todos/12" and print the title as the heading of the pages.
+	$("#get").click(function(){
+	    $.ajax({
+	        url : "https://jsonplaceholder.typicode.com/todos/12",
+	        type : "GET",
+	        success : function(data){
+	            console.log(data);
+	            document.getElementById("head").innerText=data.title;
+	        }
+
+	    })
+	});
+    </script>
+	
+</body>
+</html>
